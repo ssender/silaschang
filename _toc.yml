@@ -1,0 +1,12 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+ - chapters:
+    - file : about
+ - caption: Finite-Field-Flowers
+   chapters:
+    - file : fff_part1
+    - file : fff_part2
