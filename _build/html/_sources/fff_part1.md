@@ -54,7 +54,7 @@ The nice thing about the circle visualization is it gives a convincing argument 
 Mathematicians have given this world the official name "*The Ring of Integers Modulo 3*", or just $\mathbb Z / (3)$ for short. The number $3$ is called the *modulus*.
 
 Of course, there is nothing special about the number $3$. We could have chosen to treat $12$ as $0$ instead, and in this world (called $\mathbb Z / (12)$), other things would be true, like:
-- $[3] + [11] = [14] =[2]$
+- $[9] + [5] = [14] = [2] = [9] - [7]$
 - $[-8] = [4] = [16]$
 - $[3] \cdot [9] = [27] = [24]+[3] = [3] $
 
@@ -94,7 +94,7 @@ It turns out that if the modulus $m$ is prime, then the ring $\mathbb Z / (m)$ i
 
 $$ [2] \cdot [x] = [2x] = [1] $$
 
-But $2x$ is always even, while every number in the blob $[1]$ is odd, so this is impossible! This has to do with the fact 2 shares a common factor with the modulus 4. 
+But $2x$ is always even, while every number in the class $[1]$ is odd, so this is impossible! This has to do with the fact 2 shares a common factor with the modulus 4. 
 
 [image not picnic in Z/(4)]
 

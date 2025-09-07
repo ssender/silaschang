@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Lemonade and Cookies
+title: Silas Chang
 author: Silas Chang
-logo: images/icon.png
+# logo: images/icon.png
 copyright: ""
 
 # Do not execute notebooks on each build.

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>About &#8212; Silas Chang</title>
+    <title>Picking Flowers in Finite Fields (1) &#8212; Silas Chang</title>
   
   
   
@@ -59,12 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'about';</script>
-    <link rel="author" title="About these documents" href="#" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'fff';</script>
+    <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Picking Flowers in Finite Fields (1)" href="fff.html" />
-    <link rel="prev" title="Welcome" href="intro.html" />
+    <link rel="prev" title="About" href="about.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,12 +181,12 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">About</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Finite-Field-Flowers</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="fff.html">Picking Flowers in Finite Fields (1)</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Picking Flowers in Finite Fields (1)</a></li>
 </ul>
 
     </div>
@@ -242,7 +241,7 @@
       
       
       
-      <li><a href="_sources/about.md" target="_blank"
+      <li><a href="_sources/fff.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -326,7 +325,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>About</h1>
+    <h1>Picking Flowers in Finite Fields (1)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -336,11 +335,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#me">Me</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-are-those-guys">Who are those guys</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-does-this-website-exist">Why does this website exist</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#favorite-finite-group">Favorite finite group</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#favorite-pokemon">Favorite Pokemon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modular-arithmetic">Modular Arithmetic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modular-polynomial-arithmetic">Modular Polynomial Arithmetic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#growing-the-flowers">Growing the Flowers</a></li>
 </ul>
             </nav>
         </div>
@@ -352,30 +349,103 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="about">
-<h1>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h1>
-<section id="me">
-<h2>Me<a class="headerlink" href="#me" title="Link to this heading">#</a></h2>
-<p>Hi! I’m Silas Chang, a semi-retired competitive climber, an active youth climbing coach, occasional routesetter, and third-year undergraduate student of mathematics at the University of California Irvine.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="picking-flowers-in-finite-fields-1">
+<h1>Picking Flowers in Finite Fields (1)<a class="headerlink" href="#picking-flowers-in-finite-fields-1" title="Link to this heading">#</a></h1>
+<a class="reference internal image-reference" href="_images/fff_0.png"><img alt="a flower" class="align-center" src="_images/fff_0.png" style="width: 768px;" />
+</a>
+<p>There is a type of “mathematcial world” in the area of math known as abstract algebra called a finite field. While I was exploring ways to visualize their structure, I stumbled on a procedure that generated these fascinating images:</p>
+<p>[images of graphs]</p>
+<p>This is a casual exploration of what these structures are and how these patterns emerge from them. In the future, I might upload a more rigorous/formal discussion, but the purpose of this piece is just to introduce the concepts necessary to generate these pictures, expecting no more than a couple years of high school math background.</p>
+<section id="modular-arithmetic">
+<h2>Modular Arithmetic<a class="headerlink" href="#modular-arithmetic" title="Link to this heading">#</a></h2>
+<p>Modular arithmetic is a world of whole-number mathematics where numbers are just treated as remainders of division.</p>
+<a class="reference internal image-reference" href="_images/fff_mod.png"><img alt="modular" class="align-center" src="_images/fff_mod.png" style="width: 768px;" />
+</a>
+<p>In this world, we choose a modulus (in this case, the choice is 6) and treat every number as equal to its remainder when divided by the modulus. For example, we now say that <span class="math notranslate nohighlight">\(3 = 9 = 15\)</span>, because when divided by <span class="math notranslate nohighlight">\(6\)</span>, they all have the same remainder <span class="math notranslate nohighlight">\(3\)</span>.</p>
+<p>Essentially, we have just declared that in our new world, <span class="math notranslate nohighlight">\(6 = 0\)</span>. Here are some examples of what strange statements are true in this world (the symbol <span class="math notranslate nohighlight">\(\pmod{6}\)</span> indicates we are in this new world):</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(3 + 4 = 1 \pmod{6}\)</span>, since the remainder of 7 when divided by 6 is 1</p></li>
+<li><p><span class="math notranslate nohighlight">\(4 = 10 = 16 \pmod{6}\)</span>, since adding 6 is like adding 0</p></li>
+<li><p><span class="math notranslate nohighlight">\(4 \cdot 2 = 2 \pmod{6}\)</span>, since <span class="math notranslate nohighlight">\( 8 = 6 + 2\)</span>, and <span class="math notranslate nohighlight">\(6\)</span> is <span class="math notranslate nohighlight">\(0\)</span></p></li>
+</ul>
+<p>By declaring this new rule, we have essentially created with a world with only the 6 numbers <span class="math notranslate nohighlight">\(\{0, 1, 2, 3, 4, 5\}\)</span>. I like to imagine this as twirling the line of integers into a coil and flattening it into a circle.</p>
+<a class="reference internal image-reference" href="_images/fff_2.png"><img alt="coiling the integers" class="align-center" src="_images/fff_2.png" style="width: 768px;" />
+</a>
+<p>Alternatively, you could think of this as a short integer line with portals on each side.</p>
+<a class="reference internal image-reference" href="_images/fff_portals.png"><img alt="portalling the integers" class="align-center" src="_images/fff_portals.png" style="width: 720px;" />
+</a>
+<p>In each picture, it’s not too hard to see why <span class="math notranslate nohighlight">\(3+4 = 1\)</span>:</p>
+<ul class="simple">
+<li><p>in the first picture, if you start at <span class="math notranslate nohighlight">\(3\)</span> and take <span class="math notranslate nohighlight">\(4\)</span> steps around the circle, you end up at <span class="math notranslate nohighlight">\(1\)</span></p></li>
+<li><p>in the second picture, if you start at <span class="math notranslate nohighlight">\(3\)</span> and take <span class="math notranslate nohighlight">\(4\)</span> steps right, you end up at <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+</ul>
+<p>Multiplication still works in this world, but weird things are true, like</p>
+<div class="math notranslate nohighlight">
+\[ 3 \cdot 4 = 12 = 0 \pmod{6} \]</div>
+<p>Does division work in this world? Division is just undoing multiplication, (this is the slogan “division is the same as multiplying by the reciprocal” from elementary school,) so to divide by say, <span class="math notranslate nohighlight">\(4\)</span>, we would need to find a reciprocal of <span class="math notranslate nohighlight">\(4\)</span>, an integer <span class="math notranslate nohighlight">\(x\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[ 4 \cdot x = 1 \pmod 6\]</div>
+<p>so that multiplying by <span class="math notranslate nohighlight">\(4\)</span> and then <span class="math notranslate nohighlight">\(x\)</span> has the same effect as not multiplying at all (multiplying by <span class="math notranslate nohighlight">\(1\)</span>).</p>
+<p>It turns out that finding such an <span class="math notranslate nohighlight">\(x\)</span> in this case is impossible. The reason is that the left-hand side of the above equation <span class="math notranslate nohighlight">\(4x\)</span> is always an even number, but numbers that equal to <span class="math notranslate nohighlight">\(1 \pmod 6\)</span> are <span class="math notranslate nohighlight">\(1\)</span> more than a multiple of <span class="math notranslate nohighlight">\(6\)</span>, hence odd.</p>
+<p>However, if we chose a better modulus, we could have division in our new world:</p>
+<p>[table of inverses mod 3]</p>
+<p>A structure like this where we can add, subtract, multiply, and divide (by anything nonzero) is called a “<strong>field</strong>” by mathematicians.</p>
+<p>Since the field we just made has only 3 numbers, it is finite in size and called a “finite field”. It turns out (for some relatively ordinary number theory reasons) that doing integer arithmetic with a prime number as a modulus always creates a field.</p>
+<p>The real numbers are a familiar field, as well as the rational numbers, though these are not finite. The integers are not a field, since for example, <span class="math notranslate nohighlight">\(1/2\)</span> is not an integer, meaning we can’t divide by 2 while staying in the world of integers.</p>
 </section>
-<section id="who-are-those-guys">
-<h2>Who are those guys<a class="headerlink" href="#who-are-those-guys" title="Link to this heading">#</a></h2>
-<p>[image of lemonade and cookies]</p>
-<p>The cats which decorate the drawings in my writing are named Lemonade and Cookies, and were originally designed by my sister, on an invitation to a family lemonade-and-cookies snack time:</p>
-<p>[image of OG]</p>
+<section id="modular-polynomial-arithmetic">
+<h2>Modular Polynomial Arithmetic<a class="headerlink" href="#modular-polynomial-arithmetic" title="Link to this heading">#</a></h2>
+<p>We can move to the larger world of polynomials mod 3. Polynomials here are expressions consisting of a sum of terms of form <span class="math notranslate nohighlight">\(ax^k\)</span>, where <span class="math notranslate nohighlight">\(a\)</span> comes from our world of numbers mod 3, and <span class="math notranslate nohighlight">\(x^k\)</span> is some power of the unkown variable <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Some exploration of what is true here:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( 4x^2 + 3x^2 = x^2\)</span>, since <span class="math notranslate nohighlight">\(4 + 3 = 7 = 1 \pmod 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((3x + 2) + (2x + 4) = 2x\)</span>, since <span class="math notranslate nohighlight">\(5x = 2x\)</span>, and <span class="math notranslate nohighlight">\(2 + 4 = 6 = 0 \pmod 3\)</span></p></li>
+</ul>
+<p>This is no longer a field (note it’s impossible to divide by <span class="math notranslate nohighlight">\(x\)</span> here). However, we can play the same trick of simply declaring a polynomial to be zero that we played before (when we said <span class="math notranslate nohighlight">\(6=0\)</span>). Let’s say that <span class="math notranslate nohighlight">\((x^2 + 1) = 0\)</span>. This rule <span class="math notranslate nohighlight">\((x^2 + 1) = 0\)</span> immediately tells us that <span class="math notranslate nohighlight">\(x^2 = -1 = 2\)</span> in our new world, which gives us a way to reduce polynomials of degree 2 or higher down to degree-1 polynomials, for example,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*} x^3 + x^4 &amp;=  (x^2)x + (x^2)^2 \\
+&amp;= 2x + (2)^2  \\
+&amp;= 4 + 2x\\
+&amp;= 1 + 2x
+\end{align*}\end{split}\]</div>
+<p>Since there are only <span class="math notranslate nohighlight">\(3 \cdot 3 = 9\)</span> possible degree 1 or 0 polynomials, this is a finite world, which we can visualize as this square with portals around it:</p>
+<p>[portal square]</p>
+<p>Addition and subtraction in this world works the same as it usually would with polynomials, just with the reduction by dividing by 3 (represented by moving through the portals). In the picture, adding <span class="math notranslate nohighlight">\(1\)</span> corresponds to a step right, and adding <span class="math notranslate nohighlight">\(x\)</span> corresponds to a step up.</p>
+<p>[addition example]</p>
+<p>Multiplication is almost the same, but we have to reduce higher powers of <span class="math notranslate nohighlight">\(x\)</span> as we did above, for example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*} (x+1)(x+2) &amp;= x^2 + 3x + 2 \\
+&amp;= 2 + 0x + 2 \\
+&amp;= 4 \\
+&amp;= 1 \end{align*}\end{split}\]</div>
+<p>It turns out that the resulting world is a field (this is a consequence of the fact that our modulus <span class="math notranslate nohighlight">\((x^2 + 1)\)</span> is irreducible, the polynomial version of being prime!). For example, the previous computation showed that <span class="math notranslate nohighlight">\((x+1)\)</span> and <span class="math notranslate nohighlight">\((x+2)\)</span> are inverses of each other.</p>
+<p>An important result in finite field theory is that the multiplicative elements of a finite field are <em>generated</em> by a single element, i.e. there is an element <span class="math notranslate nohighlight">\(g\)</span> such that every nonzero member of the field is equal to some power of <span class="math notranslate nohighlight">\(g\)</span>. In our example, we can take <span class="math notranslate nohighlight">\(g = (x + 1)\)</span>, since (using the arithmetic rules of our new world)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+(x+1)^1 &amp;= x + 1 \\
+(x+1)^2 &amp;= 2x \\
+(x+1)^3 &amp;= 2x + 1 \\
+(x+1)^4 &amp;= 2 \\
+(x+1)^5 &amp;= 2x + 2 \\
+(x+1)^6 &amp;= x \\
+(x+1)^7 &amp;= x + 2 \\
+(x+1)^8 &amp;= 1 \\
+\end{align*}\end{split}\]</div>
+<p>This list of values is called the cycle generated by <span class="math notranslate nohighlight">\((x+1)\)</span> in our field, and cycles like these are the key to generating the shapes from the introduction.</p>
 </section>
-<section id="why-does-this-website-exist">
-<h2>Why does this website exist<a class="headerlink" href="#why-does-this-website-exist" title="Link to this heading">#</a></h2>
-<p>I needed a creative outlet for my thoughts, mathematical and otherwise</p>
-</section>
-<section id="favorite-finite-group">
-<h2>Favorite finite group<a class="headerlink" href="#favorite-finite-group" title="Link to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\mathbb Z_2 \times \mathbb Z_2\)</span></p>
-</section>
-<section id="favorite-pokemon">
-<h2>Favorite Pokemon<a class="headerlink" href="#favorite-pokemon" title="Link to this heading">#</a></h2>
-<p>[Image of alolan ninetales]</p>
-<p>Alolan Ninetales</p>
+<section id="growing-the-flowers">
+<h2>Growing the Flowers<a class="headerlink" href="#growing-the-flowers" title="Link to this heading">#</a></h2>
+<p>You could plot the progression of the previous cycle in the square, but it looks a bit random:</p>
+<p>[random things around the square]</p>
+<p>However, the fun happens when we instead tile the plain with our little 3x3 world, and at each step, let the plot snap to the nearest point which corresponds to the next multiplication result:</p>
+<p>[ninja star construction]</p>
+<p>Construcing worlds with larger primes leads to different shapes:</p>
+<p>[swans image]</p>
+<p>Using a computer to draw these pictures for larger primes leads to these incredibly detailed shapes, which look chaotic at a small scale, but have nice symmetry as an entire shape.</p>
+<p>[lots of images]</p>
+<p>The code I used to generate these is linked HERE. REPL!!! Feel free to mess with it if that’s your type of thing.</p>
+<p>As mentioned in the introduction, I may upload a more technical discussion of why these shapes have the symmetry they have, but for now, this seems like a good place to stop.</p>
+<p>[the end]</p>
 </section>
 </section>
 
@@ -410,22 +480,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="about.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome</p>
+        <p class="prev-next-title">About</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="fff.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Picking Flowers in Finite Fields (1)</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -443,11 +504,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#me">Me</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-are-those-guys">Who are those guys</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-does-this-website-exist">Why does this website exist</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#favorite-finite-group">Favorite finite group</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#favorite-pokemon">Favorite Pokemon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modular-arithmetic">Modular Arithmetic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modular-polynomial-arithmetic">Modular Polynomial Arithmetic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#growing-the-flowers">Growing the Flowers</a></li>
 </ul>
   </nav></div>
 

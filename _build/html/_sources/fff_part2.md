@@ -34,7 +34,7 @@ This doesn't really help us too much, though - there is no apparent pattern. But
 
 What if, instead of having portals, we simply let the field tile itself infinitely?
 
-[Graph]
+[Graph expanded]
 
 Then, there are infinitely many points that could represent, say $0$. It is of course represented by the point $(0, 0)$, but also $(3, 0)$, $(0, 6)$, and in general any coordinate $(x, y)$ such that $x$ and $y$ are both multiples of 3. (This has to do with the fact that 3 = 0 in our world)
 
