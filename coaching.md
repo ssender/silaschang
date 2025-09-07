@@ -4,7 +4,7 @@
 :align: center
 ```
 
-# Silas Chang Private Instruction
+# Private Climbing Instruction
 
 ## About
 
