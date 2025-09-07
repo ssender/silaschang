@@ -1,4 +1,4 @@
-# Silas Chang Math Tutoring
+# Math Tutoring
 
 ## About
 
@@ -15,6 +15,7 @@ Hello! My name is Silas Chang, and I am a current mathematics student at UCI. I 
 - High school mathematics (Algebra/Geometry/Precalculus)
 - Calculus 1/AB/2/BC
 - Probability
+- Introduction to Proofs & Higher Math
 
 ## Details
 
