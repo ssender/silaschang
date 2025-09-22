@@ -30,7 +30,7 @@ National Finalist (top 10) in all 3 disciplines
 ## Details
 
 ### Pricing: 
-\$60/hour (or $270 per 5 hours when purchased as a package, a 10% discount)
+\$60/hour (or \$270 per 5 hours when purchased as a package, a 10% discount)
 
 ### Available Times: 
 Every Saturday, excluding certain competition/event weekends:
