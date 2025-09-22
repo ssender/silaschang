@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Silas Chang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">None</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Welcome</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-coaching">Private Climbing Instruction</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-tutoring">Math Tutoring</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="welcome">
+<h1>Welcome<a class="headerlink" href="#welcome" title="Link to this heading">#</a></h1>
+<p>this is my website.</p>
+<p>If you are a parent looking for climbing instruction or tutoring information, please see these pages:</p>
+<p><a class="reference internal" href="#document-coaching"><span class="std std-doc">Private Climbing Instruction</span></a></p>
+<p><a class="reference internal" href="#document-tutoring"><span class="std std-doc">Math Tutoring</span></a></p>
+<p>Made with Jupyter-Book.</p>
+<div class="toctree-wrapper compound">
+<span id="document-coaching"></span><a class="reference internal image-reference" href="_images/iamcoaching.png"><img alt="banner" class="align-center" src="_images/iamcoaching.png" style="width: 500px;" />
+</a>
+<section class="tex2jax_ignore mathjax_ignore" id="private-climbing-instruction">
+<h2>Private Climbing Instruction<a class="headerlink" href="#private-climbing-instruction" title="Link to this heading">#</a></h2>
+<section id="about">
+<h3>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h3>
+<p>Hello! My name is Silas Chang, and I am a coach for Sender One’s youth climbing competition team. I am a graduate of the Sender One Youth Program, and now work to train the next generation of competitive athletes while I pursue a Bachelor’s Degree in Applied and Computational Mathematics at UC Irvine.</p>
+<section id="experience">
+<h4>Experience<a class="headerlink" href="#experience" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>10 years climbing</p></li>
+<li><p>2 years coaching at Sender One</p></li>
+<li><p>1 year routesetting at Sender One</p></li>
+<li><p>Understanding of complex competition-style movement</p></li>
+<li><p>Competition experience at every level, from youth local to adult world cup
+17x Youth National Championship Qualifier (7 bouldering, 5 lead, 5 speed)
+National Finalist (top 10) in all 3 disciplines
+2x Youth National Team Qualifier (speed)</p></li>
+</ul>
+</section>
+<section id="coaching-specialties">
+<h4>Coaching Specialties<a class="headerlink" href="#coaching-specialties" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Competition strategy and mental game</p></li>
+<li><p>Exploration of climbing technique, expansion of movement vocabulary</p></li>
+<li><p>Introductory-level speed climbing</p></li>
+</ul>
+</section>
+</section>
+<section id="details">
+<h3>Details<a class="headerlink" href="#details" title="Link to this heading">#</a></h3>
+<section id="pricing">
+<h4>Pricing:<a class="headerlink" href="#pricing" title="Link to this heading">#</a></h4>
+<p><span class="math notranslate nohighlight">\(60/hour (or \)</span>270 per 5 hours when purchased as a package, a 10% discount)</p>
+</section>
+<section id="available-times">
+<h4>Available Times:<a class="headerlink" href="#available-times" title="Link to this heading">#</a></h4>
+<p>Every Saturday, excluding certain competition/event weekends:</p>
+<ul class="simple">
+<li><p>10am - 11am</p></li>
+<li><p>11am - 12pm</p></li>
+<li><p>12pm - 1pm</p></li>
+</ul>
+<p>Please send an email to the address at the bottom of this page if you want to schedule a time other than the ones listed.</p>
+</section>
+<section id="booking">
+<h4>Booking:<a class="headerlink" href="#booking" title="Link to this heading">#</a></h4>
+<p>View availability and book private lessons here:</p>
+<p><a class="reference external" href="https://koalendar.com/e/private-lessons-with-silas-chang">Booking Link</a></p>
+<p>If this is the first time the athlete will be working with me, before booking please send an email to the address at the bottom of this page with the following information:</p>
+<ul class="simple">
+<li><p>Name and Age</p></li>
+<li><p>Climbing Experience (e.g. 1 year, 6 months)</p></li>
+<li><p>Competition Experience (If applicable)</p></li>
+<li><p>Current Sender One Team Level (If applicable, e.g. Training Team, Super Senders)</p></li>
+<li><p>Goals (specific things to target during private instruction)</p></li>
+</ul>
+</section>
+</section>
+<section id="contact">
+<h3>Contact<a class="headerlink" href="#contact" title="Link to this heading">#</a></h3>
+<p>Email: <a class="reference external" href="mailto:silas&#46;t&#46;chang&#37;&#52;&#48;gmail&#46;com">silas<span>&#46;</span>t<span>&#46;</span>chang<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p><em>If you’re on Sender One SNA’s competition team, you’re also welcome to contact me on the Heja app.</em></p>
+</section>
+</section>
+<span id="document-tutoring"></span><section class="tex2jax_ignore mathjax_ignore" id="math-tutoring">
+<h2>Math Tutoring<a class="headerlink" href="#math-tutoring" title="Link to this heading">#</a></h2>
+<section id="about">
+<h3>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h3>
+<p>Hello! My name is Silas Chang, and I am a current mathematics student at UCI. I enjoy studying and teaching mathematical problem-solving, and hope to eventually pursue a career in mathematics.</p>
+<section id="education-experience">
+<h4>Education &amp; Experience<a class="headerlink" href="#education-experience" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Third-year mathematics major at the University of California Irvine</p></li>
+<li><p>Worked as a Learning Assistant for an introductory-level undergraduate math course</p></li>
+<li><p>Taking graduate-level courses in the 25-26 academic year</p></li>
+</ul>
+</section>
+<section id="tutoring-subjects">
+<h4>Tutoring Subjects<a class="headerlink" href="#tutoring-subjects" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Middle school mathematics (Pre-algebra)</p></li>
+<li><p>High school mathematics (Algebra/Geometry/Precalculus)</p></li>
+<li><p>Calculus 1/AB/2/BC</p></li>
+<li><p>Probability</p></li>
+<li><p>Introduction to Proofs &amp; Higher Math</p></li>
+</ul>
+</section>
+</section>
+<section id="details">
+<h3>Details<a class="headerlink" href="#details" title="Link to this heading">#</a></h3>
+<section id="pricing">
+<h4>Pricing:<a class="headerlink" href="#pricing" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>$45/hour</p></li>
+<li><p>In-home is available for those in the Tustin/Irvine/Santa Ana areas.</p></li>
+<li><p>Remote via zoom is available</p></li>
+</ul>
+</section>
+<section id="booking">
+<h4>Booking<a class="headerlink" href="#booking" title="Link to this heading">#</a></h4>
+<p>Please email the address at the bottom of the page with the following information if you are interested in booking:</p>
+<ul class="simple">
+<li><p>Student’s name, grade, and current math class</p></li>
+<li><p>Preference for remote/in-person</p></li>
+<li><p>Time availability/preferences</p></li>
+<li><p>Goals (e.g. performance on standardized tests, preparation for a particular class, help with homework, etc.)</p></li>
+</ul>
+</section>
+</section>
+<section id="contact">
+<h3>Contact<a class="headerlink" href="#contact" title="Link to this heading">#</a></h3>
+<p>Email: <a class="reference external" href="mailto:silas&#46;t&#46;chang&#37;&#52;&#48;gmail&#46;com">silas<span>&#46;</span>t<span>&#46;</span>chang<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+</section>
+</section>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-coaching">Private Climbing Instruction</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-tutoring">Math Tutoring</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Silas Chang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
