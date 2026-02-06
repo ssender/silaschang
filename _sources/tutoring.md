@@ -1,5 +1,7 @@
 # Math Tutoring
 
+*currently not accepting new clients due to heavy school load*
+
 ## About
 
 Hello! My name is Silas Chang, and I am a current mathematics student at UCI. I enjoy studying and teaching mathematical problem-solving, and hope to eventually pursue a career in mathematics. 
