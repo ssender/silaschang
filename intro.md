@@ -1,8 +1,8 @@
 # Welcome
 
-this is my website.
+This is my website, which I created to satiate my desire to scream into the void after deleting social media. 
 
-Most recent post: [Pretzels](pretzels.md)
+Here is my most recent post: [Pretzels](pretzels.md)
 
 If you are a parent looking for climbing instruction or tutoring information, please see these pages:
 
