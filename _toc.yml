@@ -4,7 +4,11 @@
 format: jb-book
 root: intro
 parts:
- - chapters:
+ - caption: Serious Stuff
+   chapters:
     - file : coaching
     - file : tutoring
+ - caption: Less Serious Stuff
+   chapters:
+    - file : pretzels 
 
